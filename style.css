@@ -1,0 +1,135 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Montserrat:wght@100..900&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+
+:root {
+  /*========== Colors ==========*/
+
+  --first-color: hsl(45, 99%, 55%);
+  --first-color-alt: hsl(45, 99%, 48%);
+  --second-color: hsl(22, 100%, 8%);
+  --white-color: hsl(34, 100%, 96%);
+  --title-color: hsl(22, 100%, 8%);
+  --text-color: hsl(22, 24%, 32%);
+  --text-color-light: hsl(23, 16%, 40%);
+  --body-color: hsl(34, 100%, 92%);
+  --body-color-alt: hsl(34, 100%, 88%);
+  --container-color: hsl(34, 100%, 96%);
+  --shadow-small-img: drop-shadow(0 4px 16px hsla(22, 100%, 8%, 0.2));
+  --shadow-big-img: drop-shadow(0 8px 24px hsla(22, 100%, 8%, 0.2));
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+
+  --body-font: "Montserrat", sans-serif;
+  --second-font: "Aclonica", sans-serif;
+}
+
+/*=============== base ===============*/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text-color);
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/*=============== header ===============*/
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: var(--body-color);
+}
+.navbar {
+  position: relative;
+  /* height: 3.5rem; */
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  color: var(--title-color);
+  font-family: var(--second-font);
+}
+
+.logo img {
+  width: 20px;
+}
+
+.logo div {
+  background-color: var(--first-color);
+  padding: 6px;
+  border-radius: 8px;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links {
+  position: relative;
+  color: var(--title-color);
+  font-family: var(--second-font);
+}
+
+.nav-links::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  background-color: var(--first-color);
+  transition: width 0.3s;
+}
+
+.nav-links:hover::after {
+  width: 60%;
+}
+
+/*=============== responsive navigation ===============*/
+
+@media only screen and (max-width: 800px) {
+  .navbar {
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .nav-links {
+    font-size: 0.9rem;
+  }
+}
