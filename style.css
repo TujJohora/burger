@@ -46,6 +46,7 @@ body {
   color: var(--text-color);
   font-family: var(--body-font);
   background-color: var(--body-color);
+  overflow-x: hidden;
 }
 
 .container {
@@ -131,5 +132,207 @@ body {
 
   .nav-links {
     font-size: 0.9rem;
+  }
+}
+
+/*=============== home ===============*/
+
+/* .home-container {
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+  height: 80vh;
+  margin-top: 6rem;
+} */
+
+.home {
+  width: 100%;
+}
+
+.home-container {
+  height: 80vh;
+  margin-top: 5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 7rem;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+.home-left {
+  position: relative;
+}
+
+.home-title {
+  color: var(--title-color);
+  font-size: 3.5rem;
+  font-family: var(--second-font);
+  margin-bottom: 1.2rem;
+}
+
+.home-description {
+  line-height: 1.5rem;
+  color: var(--text-color-light);
+  margin-bottom: 2.5rem;
+}
+
+.button {
+  display: inline-flex;
+  color: var(--title-color);
+  font-family: var(--second-font);
+  background-color: var(--first-color);
+  padding: 1rem 1.5rem;
+  border-radius: 4rem;
+  transition: box-shadow 0.4s;
+}
+
+.button:hover {
+  box-shadow: 0 8px 24px hsla(22, 100%, 8%, 0.2);
+}
+/* 
+.home-sticker {
+  width: 40px;
+  position: absolute;
+  bottom: 2rem;
+  right: 15rem;
+  rotate: 15deg;
+  opacity: 0.5;
+} */
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.home-right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-burger,
+.home-dish {
+  filter: drop-shadow(0 8px 24px hsla(22, 100%, 8%, 0.2));
+}
+
+.home-burger {
+  max-width: initial;
+  width: 300px;
+  z-index: 2;
+  filter: drop-shadow(0 8px 24px hsla(22, 100%, 8%, 0.2));
+}
+
+.home-dish {
+  width: 340px;
+  position: absolute;
+  bottom: -2.5rem;
+}
+/* 
+.home-ingredient {
+  width: 60px;
+  z-index: 2;
+  filter: drop-shadow(0 4px 16px hsla(22, 100%, 8%, 0.2));
+}
+
+.home-potato-1 {
+  position: absolute;
+  width: 60px;
+  left: 5rem;
+  top: 1rem;
+}
+
+.home-potato-2 {
+  position: absolute;
+  width: 60px;
+  bottom: -2rem;
+  left: 22rem;
+  rotate: 90deg;
+}
+
+.home-tomato-1 {
+  position: absolute;
+  width: 40px;
+  right: 12rem;
+  top: -1rem;
+}
+
+.home-tomato-2 {
+  width: 40px;
+  position: absolute;
+  bottom: -0.5rem;
+  left: 12rem;
+}
+
+.home-lettuce-1 {
+  position: absolute;
+  right: 4rem;
+  top: 2rem;
+  transform: scaleX(-1);
+}
+
+.home-lettuce-2 {
+  position: absolute;
+  bottom: 2rem;
+  left: 4rem;
+} */
+/*=============== responsive navigation ===============*/
+
+@media only screen and (max-width: 800px) {
+  .home-title {
+    font-size: 2rem;
+  }
+
+  .home-description {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    font-size: 0.9rem;
+    padding: 10px 13px;
+  }
+  .home-burger {
+    width: 210px;
+  }
+  .home-dish {
+    width: 250px;
+    bottom: -2rem;
+  }
+}
+/* For medium devices */
+
+@media only screen and (max-width: 540px) {
+  .home-title {
+    font-size: 1.6rem;
+  }
+
+  .home-description {
+    font-size: 1rem;
+  }
+  .grid {
+    gap: 4rem;
+  }
+}
+
+/* For small devices */
+
+@media only screen and (max-width: 330px) {
+  .home-title {
+    font-size: 1.2rem;
+  }
+
+  .home-description {
+    font-size: 0.8rem;
+  }
+
+  .button {
+    font-size: 0.7rem;
+    padding: 10px 12px;
+  }
+  .grid {
+    gap: 3rem;
   }
 }
